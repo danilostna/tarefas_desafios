@@ -1,5 +1,7 @@
 package br.com.santana.exemplos.java8;
 
+import java.util.stream.IntStream;
+
 public class CalculoFatorial {
     public static void main(String[] args) {
         long inicio = System.currentTimeMillis();
