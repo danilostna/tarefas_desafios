@@ -1,5 +1,7 @@
 package br.com.santana.desafios;
 
+import br.com.santana.desafios.utils.DesafiosCheckerUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -43,23 +45,7 @@ public class PalavrasDuplicadas {
         expected.add("in inthe");
         expected.add("Hello Ab");
 
-        boolean sucesso = true;
-        int index = 0;
-
-        if(resultado.size() != expected.size()) {
-            System.out.println("Você falhou miseravelmente");
-        }
-
-        while (index < resultado.size()) {
-            sucesso = resultado.get(index).equals(expected.get(index));
-            index++;
-        }
-
-        if (sucesso) {
-            System.out.println("Parabéns, você está próximo de se tornar um code master!");
-        } else {
-            System.out.println("Quase lá, estude mais!");
-        }
+        DesafiosCheckerUtils.compareResultadoEsperado(resultado, expected);
     }
 
     private static List<String> buildCasoDeTeste() {
